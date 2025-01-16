@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sketch</title>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Match: Tu asesor de moda digital</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
+    <div id="circle-background"></div>
+    <!-- Fondo animado -->
+    <div id="app">
+      <div id="welcome-screen">
+        <h1>Bienvenido a Color Match</h1>
+        <p>¡Detecta y combina colores de tu ropa con consejos de moda!</p>
+        <input type="text" id="username" placeholder="Ingresa tu nombre" />
+        <button id="startButton">Comenzar</button>
+      </div>
+
+      <div id="steps" style="display: none">
+        <h2 id="stepTitle">Hola, ¡Vamos al Paso 1!</h2>
+        <div id="result">
+          <p>Color detectado: <span id="detectedColor">Ninguno</span></p>
+        </div>
+        <div id="video"></div>
+        <button id="nextStep">Siguiente paso</button>
+        <button id="resetButton">Reiniciar</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="sketch.js"></script>
   </body>
 </html>
